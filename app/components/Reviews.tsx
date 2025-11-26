@@ -39,7 +39,7 @@ export default function Reviews() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4 italic">"{review.text}"</p>
-              <p className="text-forestgreen font-semibold">— {review.author}</p>
+              <p className="text-teal font-semibold">— {review.author}</p>
             </div>
           ))}
         </div>

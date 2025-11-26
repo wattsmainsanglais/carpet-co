@@ -3,23 +3,61 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --forestgreen: #5B9BD5;
-  --orange: #2E75B5;
-  --lightblue: #5B9BD5;
-  --darkblue: #2E75B5;
-  --navy: #1a4d7a;
+
+  /* Brand colors from logo */
+  --teal: #135160;
+  --burgundy: #411934;
+
+  /* Teal variations */
+  --teal-light: #2a7585;
+  --teal-lighter: #4a919e;
+  --teal-dark: #0d3d47;
+  --teal-darker: #08262e;
+
+  /* Burgundy variations */
+  --burgundy-light: #5a2449;
+  --burgundy-lighter: #734d66;
+  --burgundy-dark: #2d1123;
+
+  /* Legacy color mappings for existing components */
+  --forestgreen: #135160;
+  --orange: #2a7585;
+  --lightblue: #2a7585;
+  --darkblue: #135160;
+  --navy: #411934;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Brand colors */
+  --color-teal: var(--teal);
+  --color-burgundy: var(--burgundy);
+
+  /* Teal variations */
+  --color-teal-light: var(--teal-light);
+  --color-teal-lighter: var(--teal-lighter);
+  --color-teal-dark: var(--teal-dark);
+  --color-teal-darker: var(--teal-darker);
+
+  /* Burgundy variations */
+  --color-burgundy-light: var(--burgundy-light);
+  --color-burgundy-lighter: var(--burgundy-lighter);
+  --color-burgundy-dark: var(--burgundy-dark);
+
+  /* Legacy colors */
   --color-forestgreen: var(--forestgreen);
   --color-orange: var(--orange);
   --color-lightblue: var(--lightblue);
   --color-darkblue: var(--darkblue);
   --color-navy: var(--navy);
-  --color-primary: var(--lightblue);
-  --color-accent: var(--darkblue);
+
+  /* Semantic colors */
+  --color-primary: var(--teal);
+  --color-accent: var(--burgundy);
+  --color-secondary: var(--teal-light);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-bebas: var(--font-bebas);

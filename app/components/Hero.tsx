@@ -14,30 +14,34 @@ export default function Hero() {
           priority
         />
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-navy/70" />
+        <div className="absolute inset-0 bg-burgundy-light/50" />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 text-center relative z-10">
-        <h1 className="text-6xl md:text-8xl font-bold mb-2 drop-shadow-lg font-bebas tracking-wider">
-          CARPETCO
-        </h1>
-        <p className="text-2xl md:text-3xl mb-6 drop-shadow-md font-light opacity-80">
-          Dukinfield
-        </p>
-        <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md">
+        <div className="mb-8 flex justify-center">
+          <Image
+            src="/Carpertco copy.webp"
+            alt="CARPET Co. Dukinfield"
+            width={500}
+            height={180}
+            priority
+            className="w-full max-w-md md:max-w-lg drop-shadow-2xl rounded-xl"
+          />
+        </div>
+        <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md text-white font-semibold">
           Carpet Fitters of Distinction
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <Link
             href="#gallery"
-            className="bg-orange hover:bg-orange/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg"
+            className="bg-teal hover:bg-teal-light text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg"
           >
             View Our Work
           </Link>
           <Link
             href="#contact"
-            className="bg-white text-navy hover:bg-white/90 px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg"
+            className="bg-burgundy-light hover:bg-burgundy-lighter text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg"
           >
             Get in Touch
           </Link>
