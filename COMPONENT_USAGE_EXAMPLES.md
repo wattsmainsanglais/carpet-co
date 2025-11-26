@@ -316,9 +316,16 @@ export default function Home() {
 
 ### Colors (globals.css)
 
-Current colors:
-- `--forestgreen: #0a342f` (primary)
-- `--orange: #da5b41` (accent)
+Current colors (Carpet Co. brand):
+- `--teal: #135160` (primary, from logo)
+- `--burgundy: #411934` (accent, from logo)
+- Teal variations: light, lighter, dark, darker
+- Burgundy variations: light, lighter, dark
+
+Legacy color mappings for backwards compatibility:
+- `--forestgreen`, `--darkblue` → teal
+- `--orange`, `--lightblue` → teal-light
+- `--navy` → burgundy
 
 To change for a client:
 1. Update hex values in `/app/globals.css`
