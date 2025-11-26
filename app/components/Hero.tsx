@@ -26,7 +26,7 @@ export default function Hero() {
             width={500}
             height={180}
             priority
-            className="w-full max-w-xs md:max-w-lg drop-shadow-2xl rounded-xl"
+            className="w-full max-w-[200px] md:max-w-lg drop-shadow-2xl rounded-xl"
           />
         </div>
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md text-white font-semibold">
