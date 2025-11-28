@@ -2,64 +2,60 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
 
-  /* Brand colors from logo */
-  --teal: #135160;
-  --burgundy: #411934;
+  /* Brand colors from carpet-co-blue.png logo */
+  /* Blues - rich blue shades based on #183982 */
+  --blue: #183982;
+  --blue-light: #2d5ba8;
+  --blue-lighter: #5580c8;
+  --blue-lightest: #e8eef8;
+  --blue-dark: #0f2555;
+  --blue-darker: #0a1838;
 
-  /* Teal variations */
-  --teal-light: #2a7585;
-  --teal-lighter: #4a919e;
-  --teal-dark: #0d3d47;
-  --teal-darker: #08262e;
+  /* Golds - warm gold shades from the logo's gold gradient */
+  --gold: #D4AF37;
+  --gold-light: #E8C468;
+  --gold-lighter: #F5E6B3;
+  --gold-lightest: #FAF5E6;
+  --gold-dark: #B8941F;
+  --gold-darker: #9A7A1A;
 
-  /* Burgundy variations */
-  --burgundy-light: #5a2449;
-  --burgundy-lighter: #734d66;
-  --burgundy-dark: #2d1123;
-
-  /* Legacy color mappings for existing components */
-  --forestgreen: #135160;
-  --orange: #2a7585;
-  --lightblue: #2a7585;
-  --darkblue: #135160;
-  --navy: #411934;
+  /* Neutral backgrounds */
+  --cream: #FDFCF8;
+  --gray-light: #F8F9FA;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  /* Brand colors */
-  --color-teal: var(--teal);
-  --color-burgundy: var(--burgundy);
+  /* Brand colors - Blue */
+  --color-blue: var(--blue);
+  --color-blue-light: var(--blue-light);
+  --color-blue-lighter: var(--blue-lighter);
+  --color-blue-lightest: var(--blue-lightest);
+  --color-blue-dark: var(--blue-dark);
+  --color-blue-darker: var(--blue-darker);
 
-  /* Teal variations */
-  --color-teal-light: var(--teal-light);
-  --color-teal-lighter: var(--teal-lighter);
-  --color-teal-dark: var(--teal-dark);
-  --color-teal-darker: var(--teal-darker);
+  /* Brand colors - Gold */
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-lighter: var(--gold-lighter);
+  --color-gold-lightest: var(--gold-lightest);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-darker: var(--gold-darker);
 
-  /* Burgundy variations */
-  --color-burgundy-light: var(--burgundy-light);
-  --color-burgundy-lighter: var(--burgundy-lighter);
-  --color-burgundy-dark: var(--burgundy-dark);
-
-  /* Legacy colors */
-  --color-forestgreen: var(--forestgreen);
-  --color-orange: var(--orange);
-  --color-lightblue: var(--lightblue);
-  --color-darkblue: var(--darkblue);
-  --color-navy: var(--navy);
+  /* Neutrals */
+  --color-cream: var(--cream);
+  --color-gray-light: var(--gray-light);
 
   /* Semantic colors */
-  --color-primary: var(--teal);
-  --color-accent: var(--burgundy);
-  --color-secondary: var(--teal-light);
+  --color-primary: var(--blue);
+  --color-accent: var(--gold);
+  --color-secondary: var(--blue-light);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-montserrat);
   --font-bebas: var(--font-bebas);
   --font-brand: var(--font-bebas);
 
@@ -77,7 +73,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
 }
 
 /* Smooth scrolling */
