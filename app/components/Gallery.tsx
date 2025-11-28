@@ -28,7 +28,7 @@ export default async function Gallery() {
   return (
     <section id="gallery" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-forestgreen">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue">
           Our Work
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -42,7 +42,7 @@ export default async function Gallery() {
             {screenshots.map((screenshot) => (
               <div
                 key={screenshot.id}
-                className="relative aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"
+                className="relative aspect-video bg-blue-lightest rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"
               >
                 <Image
                   src={screenshot.path}
@@ -50,7 +50,7 @@ export default async function Gallery() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-forestgreen/0 group-hover:bg-forestgreen/20 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-gold/0 group-hover:bg-gold/15 transition-colors duration-300" />
               </div>
             ))}
           </div>

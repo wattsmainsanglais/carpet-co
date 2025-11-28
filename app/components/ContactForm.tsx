@@ -26,16 +26,16 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-cream">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-forestgreen">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue">
           Get In Touch
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+          Have a question or ready to transform your space? We'd love to hear from you.
         </p>
 
-        <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg border border-blue-lightest shadow-sm">
           <form ref={formRef} action={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -46,7 +46,7 @@ export default function ContactForm() {
                 id="name"
                 name="name"
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-teal outline-none transition-all"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue focus:border-blue outline-none transition-all"
                 placeholder="Your name"
               />
             </div>
@@ -60,7 +60,7 @@ export default function ContactForm() {
                 id="email"
                 name="email"
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-teal outline-none transition-all"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue focus:border-blue outline-none transition-all"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -73,7 +73,7 @@ export default function ContactForm() {
                 type="tel"
                 id="tel"
                 name="tel"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-teal outline-none transition-all"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue focus:border-blue outline-none transition-all"
                 placeholder="+1 (555) 123-4567"
               />
             </div>
@@ -87,7 +87,7 @@ export default function ContactForm() {
                 name="message"
                 required
                 rows={5}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-teal outline-none transition-all resize-none"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue focus:border-blue outline-none transition-all resize-none"
                 placeholder="Your message here..."
               />
             </div>
@@ -105,7 +105,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-teal hover:bg-teal-light text-white py-3 px-6 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-blue hover:bg-blue-light text-white py-3 px-6 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isSubmitting ? (
                 <>

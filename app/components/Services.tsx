@@ -24,7 +24,7 @@ export default function Services({
   return (
     <section id="services" className={`py-20 ${bgClass}`}>
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-forestgreen">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue">
           {title}
         </h2>
         {description && (
@@ -40,14 +40,14 @@ export default function Services({
             return (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-blue-lightest"
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-orange/10 rounded-lg mb-4">
+                <div className="flex items-center justify-center w-16 h-16 bg-gold-lightest rounded-lg mb-4">
                   {IconComponent && (
-                    <IconComponent className="w-8 h-8 text-orange" />
+                    <IconComponent className="w-8 h-8 text-gold-dark" />
                   )}
                 </div>
-                <h3 className="text-xl font-bold text-forestgreen mb-3">
+                <h3 className="text-xl font-bold text-blue mb-3">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">

@@ -22,9 +22,9 @@ export default function GoogleMap({
 
   if (!mapUrl) {
     return (
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-cream">
         <div className="container mx-auto px-4">
-          <div className={`bg-gray-100 rounded-lg flex items-center justify-center ${className}`} style={{ height }}>
+          <div className={`bg-blue-lightest rounded-lg flex items-center justify-center ${className}`} style={{ height }}>
             <p className="text-gray-500">Map location not configured</p>
           </div>
         </div>
@@ -35,10 +35,10 @@ export default function GoogleMap({
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-forestgreen">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-blue">
           Find Us
         </h2>
-        <div className={`rounded-lg overflow-hidden shadow-lg ${className}`} style={{ height }}>
+        <div className={`rounded-lg overflow-hidden border-2 border-blue-lightest shadow-md ${className}`} style={{ height }}>
           <iframe
             src={mapUrl}
             width="100%"
