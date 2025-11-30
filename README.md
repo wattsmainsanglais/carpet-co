@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Carpet Co. Dukinfield - Website
+
+Professional carpet fitting services website for Carpet Co. in Dukinfield. Built with Next.js 15, featuring a modern azure blue and yellow color scheme with full dark mode support.
+
+## Design System
+
+### Brand Colors (from carpet-co-azure logo)
+
+**Azure Blues** (Primary):
+- `#024378` - Primary azure blue
+- `#3679a4` - Light blue
+- `#7ba5c5` - Lighter blue
+- `#e6f0f7` - Lightest blue (backgrounds)
+- `#01305a` - Dark blue
+- `#011d3c` - Darker blue
+
+**Yellows** (Accent):
+- `#fac444` - Primary yellow
+- `#fcd570` - Light yellow
+- `#fde79d` - Lighter yellow
+- `#fef9ed` - Lightest yellow (cream)
+- `#d9a428` - Dark yellow
+- `#b8891a` - Darker yellow
+
+### Dark Mode
+Full dark mode support with toggle button in NavBar.
+
+**Light Mode:**
+- Backgrounds: White, cream
+- Text: Blue shades
+- Accents: Yellow/gold
+
+**Dark Mode:**
+- Main backgrounds: Black (#000000)
+- Section variations: Dark gray (zinc-900)
+- Cards: Medium blue (#024378)
+- Text: Gold-light, white
+- Accents: Yellow/gold
+
+### Typography
+- **Primary**: Montserrat (weights 300-800) - matches logo
+- **Display**: Bebas Neue - special headings
+
+### Logos
+**Light Mode:**
+- NavBar: `/public/carpet-co-azure.png`
+- Hero: `/public/carpet-co-azure-crop.png`
+
+**Dark Mode:**
+- NavBar: `/public/carpetco-dark.webp`
+- Hero: `/public/carpetco-dark-crop.png`
+
+## Components
+
+- **NavBar**: Fixed navigation with logo, mobile menu, and dark mode toggle
+- **Hero**: Full-screen hero with logo and CTA buttons (logo changes in dark mode)
+- **Gallery**: Dynamic gallery from `/public/work*.{jpg,png,webp}`
+- **About**: Contact information and opening hours
+- **Reviews**: Customer testimonials with star ratings
+- **ContactForm**: Contact form with server action (UK phone format)
+- **GoogleMap**: Embedded Google Maps
+- **Footer**: Site footer with links
+- **DarkModeToggle**: Theme toggle (saves to localStorage)
 
 ## Getting Started
 
-First, run the development server:
-
+### Development
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Key Features
 
-## Learn More
+- Modern Next.js 15 with App Router
+- Turbopack for fast development
+- **Full dark mode** with toggle (class-based, saves preference)
+- Optimized Google Fonts (Montserrat, Bebas Neue)
+- Responsive design (mobile-first)
+- Server-side contact form with Nodemailer
+- Dynamic gallery from file system
+- Smooth scrolling navigation
+- SEO optimized
+- Logo variants for light/dark modes
 
-To learn more about Next.js, take a look at the following resources:
+## Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **COMPONENT_USAGE_EXAMPLES.md** - Detailed component usage and customization
+- **DUAL_LANGUAGE_GUIDE.md** - Guide for dual language implementation (not currently active)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact Form Setup
 
-## Deploy on Vercel
+The contact form uses Nodemailer. Configure environment variables in `.env.local`:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```env
+EMAIL_USER=your-email@example.com
+EMAIL_PASS=your-app-password
+EMAIL_TO=recipient@example.com
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Location
+
+Wild St, Dukinfield SK16 4DL
+Phone: 0161 344 5377
+Hours: Mon-Fri 10am-5pm
+
+## Tech Stack
+
+- Next.js 15.5.6
+- React 19
+- TypeScript
+- Tailwind CSS
+- Lucide Icons
+- Nodemailer

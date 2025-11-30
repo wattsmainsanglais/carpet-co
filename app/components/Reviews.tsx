@@ -25,21 +25,21 @@ export default function Reviews() {
   ];
 
   return (
-    <section id="reviews" className="py-20 bg-white">
+    <section id="reviews" className="py-20 bg-white dark:bg-black">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-blue">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-blue dark:text-gold-light">
           Customer Reviews
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {reviews.map((review, index) => (
-            <div key={index} className="bg-cream p-6 rounded-lg border border-blue-lightest shadow-sm hover:shadow-md transition-shadow">
+            <div key={index} className="bg-cream dark:bg-blue p-6 rounded-lg border border-blue-lightest dark:border-blue-light shadow-sm hover:shadow-md transition-shadow">
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-gold text-gold" />
                 ))}
               </div>
-              <p className="text-gray-700 mb-4 italic">"{review.text}"</p>
-              <p className="text-blue font-semibold">— {review.author}</p>
+              <p className="text-gray-700 dark:text-gray-300 mb-4 italic">"{review.text}"</p>
+              <p className="text-blue dark:text-gold-light font-semibold">— {review.author}</p>
             </div>
           ))}
         </div>

@@ -26,23 +26,23 @@ export default async function Gallery() {
   const screenshots = await getScreenshots();
 
   return (
-    <section id="gallery" className="py-20 bg-white">
+    <section id="gallery" className="py-20 bg-white dark:bg-black">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue dark:text-gold-light">
           Our Work
         </h2>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
           Take a look at some of our recent carpet fitting projects. Quality workmanship and attention to detail in every installation.
         </p>
 
         {screenshots.length === 0 ? (
-          <p className="text-center text-gray-500">No screenshots available</p>
+          <p className="text-center text-gray-500 dark:text-gray-400">No screenshots available</p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {screenshots.map((screenshot) => (
               <div
                 key={screenshot.id}
-                className="relative aspect-video bg-blue-lightest rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"
+                className="relative aspect-video bg-blue-lightest dark:bg-blue-dark rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"
               >
                 <Image
                   src={screenshot.path}
@@ -50,7 +50,7 @@ export default async function Gallery() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gold/0 group-hover:bg-gold/15 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-gold/0 group-hover:bg-gold/15 dark:group-hover:bg-gold/25 transition-colors duration-300" />
               </div>
             ))}
           </div>

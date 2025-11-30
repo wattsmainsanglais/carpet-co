@@ -26,19 +26,19 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-cream">
+    <section id="contact" className="py-20 bg-cream dark:bg-zinc-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue dark:text-gold-light">
           Get In Touch
         </h2>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
           Have a question or ready to transform your space? We'd love to hear from you.
         </p>
 
-        <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg border border-blue-lightest shadow-sm">
+        <div className="max-w-2xl mx-auto bg-white dark:bg-blue p-8 rounded-lg border border-blue-lightest dark:border-blue-light shadow-sm">
           <form ref={formRef} action={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Name *
               </label>
               <input
@@ -46,13 +46,13 @@ export default function ContactForm() {
                 id="name"
                 name="name"
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue focus:border-blue outline-none transition-all"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-blue dark:bg-blue-darker dark:text-white rounded-lg focus:ring-2 focus:ring-blue dark:focus:ring-gold focus:border-blue dark:focus:border-gold outline-none transition-all"
                 placeholder="Your name"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Email *
               </label>
               <input
@@ -60,26 +60,26 @@ export default function ContactForm() {
                 id="email"
                 name="email"
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue focus:border-blue outline-none transition-all"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-blue dark:bg-blue-darker dark:text-white rounded-lg focus:ring-2 focus:ring-blue dark:focus:ring-gold focus:border-blue dark:focus:border-gold outline-none transition-all"
                 placeholder="your.email@example.com"
               />
             </div>
 
             <div>
-              <label htmlFor="tel" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="tel" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Phone
               </label>
               <input
                 type="tel"
                 id="tel"
                 name="tel"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue focus:border-blue outline-none transition-all"
-                placeholder="+1 (555) 123-4567"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-blue dark:bg-blue-darker dark:text-white rounded-lg focus:ring-2 focus:ring-blue dark:focus:ring-gold focus:border-blue dark:focus:border-gold outline-none transition-all"
+                placeholder="+44 161 123 4567"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Message *
               </label>
               <textarea
@@ -87,7 +87,7 @@ export default function ContactForm() {
                 name="message"
                 required
                 rows={5}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue focus:border-blue outline-none transition-all resize-none"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-blue dark:bg-blue-darker dark:text-white rounded-lg focus:ring-2 focus:ring-blue dark:focus:ring-gold focus:border-blue dark:focus:border-gold outline-none transition-all resize-none"
                 placeholder="Your message here..."
               />
             </div>
@@ -105,7 +105,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-blue hover:bg-blue-light text-white py-3 px-6 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-blue hover:bg-blue-light dark:bg-gold-dark dark:hover:bg-gold text-white dark:text-blue-darker py-3 px-6 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isSubmitting ? (
                 <>

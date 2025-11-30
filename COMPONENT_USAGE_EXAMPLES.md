@@ -312,39 +312,110 @@ export default function Home() {
 
 ---
 
+## Color Usage in Components
+
+### Light Mode:
+- **NavBar**: White background, blue text, gold hover
+- **Hero**: Blue-lighter overlay, blue/gold buttons
+- **About**: Cream background, blue headings, gold-dark accents
+- **Gallery**: White background, blue headings
+- **Reviews**: White background, cream cards, gold stars
+- **Contact**: Cream background, blue focus states
+- **Footer**: Blue-dark background, gold-light hover
+- **GoogleMap**: White background, blue headings
+
+### Dark Mode:
+- **NavBar**: Black background, gold-light text, carpetco-dark.webp logo
+- **Hero**: Dark overlay, carpetco-dark-crop.png logo, blue/gold buttons
+- **About**: Zinc-900 background, gold-light headings, blue cards
+- **Gallery**: Black background, gold-light headings, blue-dark cards
+- **Reviews**: Black background, blue cards, gold stars
+- **Contact**: Zinc-900 background, gold-light headings, blue cards, gold focus
+- **Footer**: Blue-darker background, gold-light text
+- **GoogleMap**: Black background, gold-light headings
+
+---
+
 ## Customization Quick Reference
 
 ### Colors (globals.css)
 
-Current colors (Carpet Co. brand):
-- `--teal: #135160` (primary, from logo)
-- `--burgundy: #411934` (accent, from logo)
-- Teal variations: light, lighter, dark, darker
-- Burgundy variations: light, lighter, dark
+Current colors (Carpet Co. brand - from carpet-co-azure logo):
 
-Legacy color mappings for backwards compatibility:
-- `--forestgreen`, `--darkblue` → teal
-- `--orange`, `--lightblue` → teal-light
-- `--navy` → burgundy
+**Azure Blues** (primary):
+- `--blue: #024378` (primary azure blue, from logo)
+- `--blue-light: #3679a4` (lighter shade)
+- `--blue-lighter: #7ba5c5` (even lighter)
+- `--blue-lightest: #e6f0f7` (subtle backgrounds)
+- `--blue-dark: #01305a` (darker shade)
+- `--blue-darker: #011d3c` (very dark, footer)
+
+**Yellows** (accent):
+- `--gold: #fac444` (primary yellow, from logo)
+- `--gold-light: #fcd570` (lighter yellow)
+- `--gold-lighter: #fde79d` (even lighter)
+- `--gold-lightest: #fef9ed` (cream/backgrounds)
+- `--gold-dark: #d9a428` (darker yellow)
+- `--gold-darker: #b8891a` (very dark yellow)
+
+**Neutrals**:
+- `--cream: #FDFCF8` (warm white background)
+- `--gray-light: #F8F9FA` (light gray background)
+
+**Dark Mode:**
+- Enabled with `@custom-variant dark (.dark &);` in globals.css
+- Toggle component adds/removes `.dark` class on `<html>`
+- Main backgrounds: Black or zinc-900 (dark gray)
+- Cards: Blue shades for contrast
+- Text: Gold-light and white
 
 To change for a client:
 1. Update hex values in `/app/globals.css`
 2. Colors automatically apply throughout the site
+3. Test both light and dark modes
+4. Maintain blue/yellow/neutral structure for consistency
 
 ### Typography
 
-Current fonts (Geist Sans & Geist Mono) in `layout.tsx`
+Current fonts:
+- **Montserrat** (primary font - matches logo) - weights 300-800
+- **Bebas Neue** (display font for special headings)
+
+Configured in `layout.tsx` using Next.js font optimization.
 
 To change:
 1. Import different Google Font in `layout.tsx`
-2. Update font variables
+2. Update font variables in `globals.css`
+3. Consider logo font for brand consistency
+
+### Logo
+
+**Light Mode:**
+- NavBar: `/public/carpet-co-azure.png`
+- Hero: `/public/carpet-co-azure-crop.png` (cropped version without bottom space)
+
+**Dark Mode:**
+- NavBar: `/public/carpetco-dark.webp`
+- Hero: `/public/carpetco-dark-crop.png`
+
+**Implementation:**
+- Uses conditional rendering with `dark:hidden` and `hidden dark:block`
+- Both logos have `rounded-xl` in NavBar, `rounded-2xl` in Hero
+- Alt text: "CARPET Co. Dukinfield"
+- Sizing: h-16 md:h-20 (navbar), max-w-[200px] md:max-w-lg (hero)
+
+To update for a client:
+1. Replace logo files in `/public/` (need both light and dark versions)
+2. Update references in `NavBar.tsx` and `Hero.tsx`
+3. Adjust sizing classes if needed
 
 ### Content
 
-All Lorem ipsum text can be replaced with client content:
+All content can be replaced with client content:
 - Hero: Title, subtitle, CTA buttons
-- About: Paragraphs
+- About: Contact info, opening hours
 - Services: Title, description, services array
+- Reviews: Customer testimonials
 - Contact: Form intro text
 - Footer: Company name, links
 
@@ -357,12 +428,18 @@ After implementing components for a client:
 - [ ] Mobile menu opens/closes properly
 - [ ] Mobile menu closes when clicking backdrop
 - [ ] Mobile menu closes when clicking a link
+- [ ] Dark mode toggle works (click to switch themes)
+- [ ] Dark mode preference saves to localStorage
+- [ ] Logos switch correctly in dark mode (NavBar and Hero)
+- [ ] All sections have proper dark mode backgrounds
+- [ ] Text is readable in both light and dark modes
 - [ ] Services display in correct grid (1/2/3 columns)
 - [ ] Services icons render correctly
 - [ ] Google Map loads and displays correctly
 - [ ] Contact form submits successfully
+- [ ] Contact form phone placeholder is correct for region (UK: +44)
 - [ ] All sections are responsive on mobile
-- [ ] Colors match client brand
+- [ ] Colors match client brand in both modes
 - [ ] All placeholder text is replaced
 - [ ] Footer year is current
 - [ ] Smooth scrolling works between sections

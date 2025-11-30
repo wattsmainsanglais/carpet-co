@@ -1,25 +1,27 @@
 @import "tailwindcss";
 
+@custom-variant dark (.dark &);
+
 :root {
   --background: #ffffff;
   --foreground: #1a1a1a;
 
-  /* Brand colors from carpet-co-blue.png logo */
-  /* Blues - rich blue shades based on #183982 */
-  --blue: #183982;
-  --blue-light: #2d5ba8;
-  --blue-lighter: #5580c8;
-  --blue-lightest: #e8eef8;
-  --blue-dark: #0f2555;
-  --blue-darker: #0a1838;
+  /* Brand colors from carpet-co-azure logo */
+  /* Azure Blues - based on #024378 */
+  --blue: #024378;
+  --blue-light: #3679a4;
+  --blue-lighter: #7ba5c5;
+  --blue-lightest: #e6f0f7;
+  --blue-dark: #01305a;
+  --blue-darker: #011d3c;
 
-  /* Golds - warm gold shades from the logo's gold gradient */
-  --gold: #D4AF37;
-  --gold-light: #E8C468;
-  --gold-lighter: #F5E6B3;
-  --gold-lightest: #FAF5E6;
-  --gold-dark: #B8941F;
-  --gold-darker: #9A7A1A;
+  /* Yellows - based on #fac444 */
+  --gold: #fac444;
+  --gold-light: #fcd570;
+  --gold-lighter: #fde79d;
+  --gold-lightest: #fef9ed;
+  --gold-dark: #d9a428;
+  --gold-darker: #b8891a;
 
   /* Neutral backgrounds */
   --cream: #FDFCF8;
@@ -63,11 +65,14 @@
   --breakpoint-lg: 1025px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+  /* Adjust colors for dark mode */
+  --blue-lightest: #1a2a3a;
+  --cream: #1a1a1a;
+  --gray-light: #1f1f1f;
 }
 
 body {
