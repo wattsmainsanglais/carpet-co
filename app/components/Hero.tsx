@@ -14,14 +14,14 @@ export default function Hero() {
           priority
         />
         {/* Subtle overlay for better text readability */}
-        <div className="absolute inset-0 bg-blue-lighter/70 dark:bg-blue-darker/85" />
+        <div className="absolute inset-0 bg-gray-100/50 dark:bg-blue-darker/85" />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="mb-8 flex justify-center">
           <Image
-            src="/carpet-co-azure-crop.png"
+            src="/cc-tealv2.png"
             alt="CARPET Co. Dukinfield"
             width={500}
             height={180}
@@ -29,7 +29,7 @@ export default function Hero() {
             className="w-full max-w-[200px] md:max-w-lg drop-shadow-xl rounded-2xl dark:hidden"
           />
           <Image
-            src="/carpetco-dark-crop.png"
+            src="/carpetco-dark.webp"
             alt="CARPET Co. Dukinfield"
             width={500}
             height={180}

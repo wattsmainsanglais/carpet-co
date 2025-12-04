@@ -6,14 +6,14 @@
   --background: #ffffff;
   --foreground: #1a1a1a;
 
-  /* Brand colors from carpet-co-azure logo */
-  /* Azure Blues - based on #024378 */
-  --blue: #024378;
-  --blue-light: #3679a4;
-  --blue-lighter: #7ba5c5;
-  --blue-lightest: #e6f0f7;
-  --blue-dark: #01305a;
-  --blue-darker: #011d3c;
+  /* Brand colors from carpet-co teal logo */
+  /* Teal shades - based on #1A6B6F */
+  --blue: #1A6B6F;
+  --blue-light: #2B8B8F;
+  --blue-lighter: #5AABAD;
+  --blue-lightest: #E6F4F5;
+  --blue-dark: #15575A;
+  --blue-darker: #0F3F42;
 
   /* Yellows - based on #fac444 */
   --gold: #fac444;

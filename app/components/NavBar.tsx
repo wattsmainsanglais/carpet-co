@@ -26,7 +26,7 @@ export default function NavBar() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="hover:opacity-80 transition-opacity">
           <Image
-            src="/carpet-co-azure.png"
+            src="/cc-tealv2.png"
             alt="CARPET Co. Dukinfield"
             width={220}
             height={80}
