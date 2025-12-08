@@ -37,8 +37,11 @@ export default function Hero() {
             className="w-full max-w-[200px] md:max-w-lg drop-shadow-xl rounded-2xl hidden dark:block"
           />
         </div>
-        <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-sm text-blue-darker dark:text-gold-light font-semibold">
+        <p className="text-xl md:text-2xl mb-2 max-w-2xl mx-auto drop-shadow-sm text-blue-darker dark:text-gold-light font-semibold">
           Carpet Fitters of Distinction
+        </p>
+        <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto drop-shadow-sm text-blue-dark dark:text-gold-lighter font-medium">
+          Family business since 1974
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <Link

@@ -97,13 +97,33 @@ npm start
 
 ## Contact Form Setup
 
-The contact form uses Nodemailer. Configure environment variables in `.env.local`:
+The contact form uses Nodemailer with Gmail SMTP. Configure environment variables in `.env`:
 
 ```env
-EMAIL_USER=your-email@example.com
-EMAIL_PASS=your-app-password
-EMAIL_TO=recipient@example.com
+HOST=smtp.gmail.com
+USER=your-email@gmail.com
+USERPASS=your-16-char-app-password
 ```
+
+### Getting a Google App Password
+
+1. **Enable 2-Step Verification** on your Google account first (required)
+2. Go directly to: https://myaccount.google.com/apppasswords
+3. Select "Mail" or create a custom name like "Carpet Co Contact Form"
+4. Click **Generate**
+5. Copy the 16-character password (shown with spaces like `abcd efgh ijkl mnop`)
+6. **Remove all spaces** when adding to `.env`: `USERPASS=abcdefghijklmnop`
+
+**Troubleshooting:**
+- If the direct link doesn't work, try searching for "app passwords" in your Google Account settings
+- Check under Security → 2-Step Verification → scroll to bottom for "App passwords"
+- App passwords only work after 2FA is enabled
+
+**Alternative Email Providers:**
+If you can't access Google App Passwords (e.g., Workspace restrictions), consider:
+- Resend (simple, free tier)
+- SendGrid (100 emails/day free)
+- AWS SES or Mailgun
 
 ## Location
 

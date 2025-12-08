@@ -1,3 +1,5 @@
+import { Facebook, Instagram } from 'lucide-react';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -12,19 +14,44 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex gap-6">
-            <a href="#home" className="hover:text-gold-light transition-colors">
-              Home
-            </a>
-            <a href="#gallery" className="hover:text-gold-light transition-colors">
-              Gallery
-            </a>
-            <a href="#about" className="hover:text-gold-light transition-colors">
-              About
-            </a>
-            <a href="#contact" className="hover:text-gold-light transition-colors">
-              Contact
-            </a>
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            {/* Social Media Icons */}
+            <div className="flex gap-4">
+              <a
+                href="https://www.facebook.com/profile.php?id=61584835528881"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold-light transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook size={24} />
+              </a>
+              <a
+                href="https://www.instagram.com/carpetcodukinfield"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold-light transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={24} />
+              </a>
+            </div>
+
+            {/* Navigation Links */}
+            <div className="flex gap-6">
+              <a href="#home" className="hover:text-gold-light transition-colors">
+                Home
+              </a>
+              <a href="#gallery" className="hover:text-gold-light transition-colors">
+                Gallery
+              </a>
+              <a href="#about" className="hover:text-gold-light transition-colors">
+                About
+              </a>
+              <a href="#contact" className="hover:text-gold-light transition-colors">
+                Contact
+              </a>
+            </div>
           </div>
         </div>
 
