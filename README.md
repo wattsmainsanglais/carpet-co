@@ -2,6 +2,9 @@
 
 Professional carpet fitting services website for Carpet Co. in Dukinfield. Built with Next.js 15, featuring a modern azure blue and yellow color scheme with full dark mode support.
 
+
+latest: 08.12.25
+
 ## Design System
 
 ### Brand Colors (from carpet-co-azure logo)
