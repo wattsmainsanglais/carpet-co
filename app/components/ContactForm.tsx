@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react"
 import { submitContactForm } from "../submitContactForm"
-import { Loader } from 'lucide-react'
+import { Loader, Facebook, Instagram } from 'lucide-react'
 
 export default function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null)
@@ -35,8 +35,40 @@ export default function ContactForm() {
           Have a question or ready to transform your space? We'd love to hear from you.
         </p>
 
-        <div className="max-w-2xl mx-auto bg-white dark:bg-blue p-8 rounded-lg border border-blue-lightest dark:border-blue-light shadow-sm">
-          <form ref={formRef} action={handleSubmit} className="space-y-6">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 max-w-6xl mx-auto items-stretch">
+          <div className="bg-white dark:bg-blue p-8 md:p-10 rounded-lg border-2 border-blue-lightest dark:border-blue-light shadow-md flex flex-col justify-center">
+            <h3 className="text-3xl font-bold mb-6 text-gold-dark dark:text-gold text-center md:text-left">Contact Information</h3>
+            <div className="space-y-4 text-lg text-gray-900 dark:text-gray-300">
+              <p><strong className="text-blue dark:text-gold-light">Address:</strong><br />Wild St, Dukinfield SK16 4DL</p>
+              <p><strong className="text-blue dark:text-gold-light">Phone:</strong><br />0161 344 5377</p>
+              <div className="mt-6 pt-6 border-t border-blue-lightest dark:border-blue-light">
+                <p className="mb-4"><strong className="text-blue dark:text-gold-light">Follow Us:</strong></p>
+                <div className="flex gap-4">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61584835528881"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue dark:text-gold-light hover:text-gold-dark dark:hover:text-gold transition-colors"
+                    aria-label="Facebook"
+                  >
+                    <Facebook size={28} />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/carpetcodukinfield"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue dark:text-gold-light hover:text-gold-dark dark:hover:text-gold transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <Instagram size={28} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white dark:bg-blue p-8 md:p-10 rounded-lg border-2 border-blue-lightest dark:border-blue-light shadow-md">
+            <form ref={formRef} action={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Name *
@@ -117,6 +149,7 @@ export default function ContactForm() {
               )}
             </button>
           </form>
+          </div>
         </div>
       </div>
     </section>
