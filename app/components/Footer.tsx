@@ -1,4 +1,5 @@
 import { Facebook, Instagram } from 'lucide-react';
+import AwattsdevFooter from './AwattsdevFooter';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -58,6 +59,7 @@ export default function Footer() {
         <div className="border-t border-blue-lighter/20 dark:border-blue-light/20 mt-6 pt-6 text-center text-sm text-blue-lightest dark:text-gray-400">
           <p>&copy; {currentYear} CARPET Co. Dukinfield. All rights reserved.</p>
         </div>
+        <AwattsdevFooter />
       </div>
     </footer>
   );

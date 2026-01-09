@@ -38,7 +38,7 @@ export default function Hero() {
           />
         </div>
         <p className="text-xl md:text-2xl mb-2 max-w-2xl mx-auto drop-shadow-sm text-blue-darker dark:text-gold-light font-semibold">
-          Carpet Fitters of Distinction
+          Carpet Planners and Fitters of Distinction
         </p>
         <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto drop-shadow-sm text-blue-dark dark:text-gold-lighter font-medium">
           Family business since 1974
