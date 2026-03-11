@@ -103,7 +103,7 @@ html {
 /* AwattsdevFooter gradient hover effect */
 .awattsdev-link {
   --b: 0.1em;   /* the thickness of the line */
-  --c: #654de9; /* the color */
+  --c: #9587e2; /* the color */
 
   color: transparent;
   font-size: 1.2em;
@@ -111,7 +111,7 @@ html {
 
   padding-block: var(--b);
   background:
-    linear-gradient(var(--c) 50%, #6b59d4d2 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
+    linear-gradient(var(--c) 50%, #d0cce7d2 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
     linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
   -webkit-background-clip: text, padding-box;
   background-clip: text, padding-box;
