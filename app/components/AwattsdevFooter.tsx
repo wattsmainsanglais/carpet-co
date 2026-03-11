@@ -6,8 +6,8 @@ const genos = Genos({ weight: ['500'], subsets: ['latin'] });
 export default function AwattsdevFooter() {
   return (
     <div className="flex justify-center py-4 mt-4 border-t border-gray-200 dark:border-white/10">
-      <div className="flex items-center gap-2 text-base text-white-600 dark:text-gray-300">
-        <span>site powered by</span>
+      <div className="flex items-center gap-2 text-base dark:text-gray-300">
+        <span className="text-white">site powered by</span>
         <Link
           href="https://www.awattsdev.eu"
           target="_blank"
