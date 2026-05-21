@@ -19,6 +19,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="container mx-auto px-4 text-center relative z-10">
+        <h1 className="sr-only">CARPET Co. Dukinfield — Carpet Fitters Since 1974</h1>
         <div className="mb-8 flex justify-center">
           <Image
             src="/cc-tealv2.png"
