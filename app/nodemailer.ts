@@ -24,9 +24,10 @@ export async function sendMail(mailOptions: MailOptions) {
   try {
     // Email to admin
     await transporter.sendMail({
-      from: process.env.USER,
+      from: { name: `${name} (Website)`, address: process.env.USER! },
       to: process.env.USER,
-      subject: `New Contact Form Submission from ${name}`,
+      replyTo: { name, address: email },
+      subject: `${name} – website enquiry`,
       html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
@@ -39,7 +40,7 @@ export async function sendMail(mailOptions: MailOptions) {
 
     // Confirmation email to user
     await transporter.sendMail({
-      from: process.env.USER,
+      from: { name: 'CarpetCo Dukinfield', address: process.env.USER! },
       to: email,
       subject: 'Thank you for contacting us!',
       html: `
